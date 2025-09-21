@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kişisel Sayfam – Ödev 2</title>
+  <meta name="description" content="Kişisel sayfam: sevdiğim film, dizi ve kitaplar." />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #222; }
+    header, main, footer { max-width: 900px; margin: 0 auto; padding: 16px; }
+    header { border-bottom: 1px solid #ddd; }
+    figure { margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    figcaption { font-size: 0.95rem; color: #555; margin-top: 6px; }
+    h1, h2 { margin: 16px 0 8px; }
+    ol { padding-left: 20px; }
+    ul { padding-left: 20px; margin: 6px 0 18px; }
+    .etiket { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 0.8rem; margin-left: 6px; }
+    .vitrin { background: #f9fafb; padding: 12px; border: 1px solid #eee; border-radius: 8px; margin-top: 12px; }
+    footer { border-top: 1px solid #eee; font-size: 0.9rem; color: #666; }
+    .inline-ornek span { background: #fff3cd; padding: 0 4px; }
+    .block-ornek { background: #f3f4f6; padding: 8px 12px; border-radius: 6px; margin-top: 8px; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Merhaba, ben <span class="etiket">Senin İsmin</span></h1>
+    <p class="inline-ornek">
+      Bu sayfada <strong>sevdiğim</strong> <em>film</em>, <em>dizi</em> ve <em>kitapları</em> paylaşıyorum.
+      <span>(Bu sarı alan <mark>inline</mark> bir örnektir.)</span>
+    </p>
+  </header>
+
+  <main>
+    <!-- Resim + açıklama -->
+    <section aria-labelledby="hakkimda">
+      <h2 id="hakkimda">Hakkımda</h2>
+      <figure class="vitrin">
+        <!-- Kendi görsel yolunu bu src'e koy -->
+        <img src="images/profil.jpg" alt="Doğada çekilmiş profil fotoğrafım." />
+        <figcaption>
+          Fotoğraf: Doğayı, kahveyi ve temiz kodu seviyorum. <abbr title="Kullanıcı Arayüzü">UI</abbr> &amp; <abbr title="Kullanıcı Deneyimi">UX</abbr> meraklısıyım.
+        </figcaption>
+      </figure>
+      <div class="block-ornek">
+        Bu gri kutu <strong>block-level</strong> bir elementtir (div). İçinde hem
+        block (p, ul) hem de inline (a, em, span) öğeler bulunabilir.
+      </div>
+    </section>
+
+    <!-- Sıralı başlıklar: Film / Dizi / Kitap -->
+    <section aria-labelledby="liste">
+      <h2 id="liste">Sevdiklerim</h2>
+
+      <ol>
+        <!-- 1) FİLM -->
+        <li>
+          <h3>Filmler</h3>
+          <ul>
+            <li>
+              <a href="https://www.imdb.com/title/tt1375666/" target="_blank" rel="noopener noreferrer">
+                Inception (2010) – IMDb
+              </a>
+              – Rüya içinde rüya fikri ve <span>Hans Zimmer</span> müzikleri.
+            </li>
+            <li>
+              Interstellar (2014) – uzay, zaman, aile.
+            </li>
+            <li>
+              Parasite (2019) – sınıf çatışmasına akıllı bir bakış.
+            </li>
+          </ul>
+        </li>
+
+        <!-- 2) DİZİ -->
+        <li>
+          <h3>Diziler</h3>
+          <ul>
+            <li>
+              <a href="https://www.imdb.com/title/tt0903747/" target="_blank" rel="noopener noreferrer">
+                Breaking Bad – IMDb
+              </a>
+              – Karakter dönüşümüne ders niteliğinde.
+            </li>
+            <li>
+              Dark – Zaman döngüleri ve katmanlı anlatım.
+            </li>
+            <li>
+              The Office – Sıcak, komik ve akıcı.
+            </li>
+          </ul>
+        </li>
+
+        <!-- 3) KİTAP -->
+        <li>
+          <h3>Kitaplar</h3>
+          <ul>
+            <li>
+              <a href="https://www.goodreads.com/book/show/5907.The_Hobbit" target="_blank" rel="noopener noreferrer">
+                The Hobbit – Goodreads
+              </a>
+              – Maceranın kalbi.
+            </li>
+            <li>
+              Hayvan Çiftliği – George Orwell
+            </li>
+            <li>
+              Suç ve Ceza – Dostoyevski
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="yil">2025</span> – Bu sayfa HTML’in temel
+      <em>block</em> ve <em>inline</em> elementleriyle hazırlandı.
+      Bana ulaş: <a href="mailto:sen@ornek.com">sen@ornek.com</a>
+    </p>
+  </footer>
+
+  <script>
+    // Küçük bir inline JS: yılı otomatik yazalım (inline örnek)
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
